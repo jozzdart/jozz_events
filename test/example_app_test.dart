@@ -76,7 +76,8 @@ void main() {
         authManager.onOrderPlaced = null;
       };
 
-      final orderId = orderProcessor.processOrder('user123', cartManager.getCartItems());
+      final orderId =
+          orderProcessor.processOrder('user123', cartManager.getCartItems());
       await checkoutCompleter.future;
 
       // Clear cart after order is processed
@@ -170,6 +171,9 @@ class AuthManager {
   String? _currentUserId;
   final Map<String, List<String>> _userOrders = {};
   Function? onOrderPlaced;
+
+  // Add a getter to expose the current user ID
+  String? get currentUserId => _currentUserId;
 
   AuthManager(this._eventBus) {
     _eventBus.listen<OrderPlacedEvent>(_onOrderPlaced);

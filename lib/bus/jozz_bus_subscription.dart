@@ -13,7 +13,8 @@ class JozzBusSubscription<T extends JozzEvent> {
   /// Creates a new JozzBusSubscription by listening to the provided stream.
   ///
   /// The onData callback will be called whenever an event of type T is emitted.
-  JozzBusSubscription(Stream<T> stream, void Function(T) onData) : subscription = stream.listen(onData);
+  JozzBusSubscription(Stream<T> stream, void Function(T) onData)
+      : subscription = stream.listen(onData);
 
   /// Cancels the subscription.
   ///

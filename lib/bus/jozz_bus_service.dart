@@ -25,6 +25,7 @@ class JozzBusService implements JozzBus {
   }
 
   @override
+
   /// Emits a domain event to all subscribers.
   ///
   /// This method adds the event to the stream asynchronously.

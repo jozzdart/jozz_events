@@ -42,19 +42,6 @@ Inspired by domain-driven design and separation of concerns, it enables features
 
 ---
 
-### 📑 Table of Contents
-
-- [Overview](#-jozz_events)
-- [Why jozz_events?](#-why-jozz_events)
-  - [Clean Architecture Friendly](#-clean-architecture-friendly)
-  - [Typed, Predictable, and Testable](#-typed-predictable-and-testable)
-  - [Framework-Agnostic](#-framework-agnostic)
-  - [Lifecycle Aware](#-lifecycle-aware)
-  - [Simpler and Safer Than Alternatives](#-simpler-and-safer-than-alternatives)
-- [Use Case Example](#-use-case-example)
-
----
-
 ## 🧱 Use Case Example
 
 **You have two features:**

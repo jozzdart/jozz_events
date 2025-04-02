@@ -23,7 +23,8 @@ class CartFeatureEvent extends JozzEvent {
 class ItemAddedToCartEvent extends CartFeatureEvent {
   final String productId;
   final int quantity;
-  const ItemAddedToCartEvent(this.productId, this.quantity) : super('Item added to cart');
+  const ItemAddedToCartEvent(this.productId, this.quantity)
+      : super('Item added to cart');
 }
 
 // Step 2: Feature modules that use the event bus
@@ -99,7 +100,8 @@ class AnalyticsFeature with JozzLifecycleMixin {
   }
 
   void _trackAddToCart(ItemAddedToCartEvent event) {
-    print('Analytics: Tracked add to cart - Product ${event.productId}, Quantity: ${event.quantity}');
+    print(
+        'Analytics: Tracked add to cart - Product ${event.productId}, Quantity: ${event.quantity}');
   }
 
   // Clean up subscriptions when the feature is no longer needed

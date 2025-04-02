@@ -45,7 +45,8 @@ extension JozzBusExtensions on JozzBus {
   ///   (event) => add(ProductStockChanged(event.productId, event.newQuantity)),
   /// );
   /// ```
-  JozzBusSubscription<T> autoListen<T extends JozzEvent>(JozzLifecycleMixin lifecycleOwner, void Function(T) onData) {
+  JozzBusSubscription<T> autoListen<T extends JozzEvent>(
+      JozzLifecycleMixin lifecycleOwner, void Function(T) onData) {
     final sub = listen<T>(onData);
     lifecycleOwner.addJozzSubscription(sub);
     return sub;

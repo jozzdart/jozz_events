@@ -104,7 +104,8 @@ void main() {
       await Future.delayed(Duration(milliseconds: 50));
 
       // Assert that the cart feature didn't receive the second login
-      expect(cartFeature.loggedInUser, equals('user123')); // Still the old value
+      expect(
+          cartFeature.loggedInUser, equals('user123')); // Still the old value
     });
   });
 }
@@ -132,7 +133,8 @@ class CartFeatureEvent extends JozzEvent {
 class ItemAddedToCartEvent extends CartFeatureEvent {
   final String productId;
   final int quantity;
-  const ItemAddedToCartEvent(this.productId, this.quantity) : super('Item added to cart');
+  const ItemAddedToCartEvent(this.productId, this.quantity)
+      : super('Item added to cart');
 }
 
 // Feature implementations for testing
