@@ -1,12 +1,21 @@
 name: jozz_events
 description: "Domain-first, framework-agnostic event system built for Clean Architecture"
 version: 1.0.1
-homepage: https://github.com/jozz/jozz_events
-repository: https://github.com/jozz/jozz_events
-issue_tracker: https://github.com/jozz/jozz_events/issues
+homepage: https://github.com/jozzzzep/jozz_events
+repository: https://github.com/jozzzzep/jozz_events
+issue_tracker: https://github.com/jozzzzep/jozz_events/issues
+topics:
+  - events
+  - clean-architecture
+  - domain-driven-design
+  - domain-driven-architecture
+  - separation-of-concerns
+  - ddd
+  - flutter
+  - bloc
 
 environment:
-  sdk: ">=3.7.2 <4.0.0"
+  sdk: ">=2.17.0 <4.0.0"
 
 dependencies:
   # No Flutter dependencies here

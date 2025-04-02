@@ -19,7 +19,7 @@ Inspired by domain-driven design and separation of concerns, it enables features
 ### ✅ Typed, Predictable, and Testable
 
 - No string-based events or untyped channels.
-- Built with Dart’s type system using generics and sealed base classes.
+- Built with Dart's type system using generics and sealed base classes.
 
 ### ✅ Framework-Agnostic
 
@@ -39,6 +39,19 @@ Inspired by domain-driven design and separation of concerns, it enables features
 | `event_bus`        | ❌ No               | ❌ No          | ❌ No             | ✅ Always        | ❌ No       |
 | Bloc-to-Bloc Comm. | ❌ Tight Coupling   | ✅ Yes         | ✅ Yes            | ❌               | ✅ Yes      |
 | Signals            | ❌ UI-focused       | ✅ Yes         | ✅ (via hooks)    | ❌               | ⚠️ UI-tied  |
+
+---
+
+### 📑 Table of Contents
+
+- [Overview](#-jozz_events)
+- [Why jozz_events?](#-why-jozz_events)
+  - [Clean Architecture Friendly](#-clean-architecture-friendly)
+  - [Typed, Predictable, and Testable](#-typed-predictable-and-testable)
+  - [Framework-Agnostic](#-framework-agnostic)
+  - [Lifecycle Aware](#-lifecycle-aware)
+  - [Simpler and Safer Than Alternatives](#-simpler-and-safer-than-alternatives)
+- [Use Case Example](#-use-case-example)
 
 ---
 
