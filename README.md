@@ -48,7 +48,6 @@ Ideal for Dart projects (including Flutter), this package brings clarity and saf
 
 ---
 
-- [Why jozz_events?](#-why-jozz_events)
 - [Use Case Example](#-use-case-example)
 - [Using the Global Singleton](#-using-the-global-singleton)
 - [Why not just `event_bus`?](#-why-not-just-event_bus)
@@ -108,7 +107,7 @@ eventBus.on<TodoCreatedEvent>().listen((event) {
 
 ---
 
-## 📁 Clean Architecture Example Structure
+### 📁 Clean Architecture Example Structure
 
 ```
 features/
@@ -124,7 +123,7 @@ Created by developers who love Clean Architecture and hate spaghetti.
 
 ---
 
-## 🌍 Using the Global Singleton
+### 🌍 Using the Global Singleton
 
 For small apps or rapid prototyping, use the global singleton:
 
@@ -309,6 +308,4 @@ class AuthCubit extends Cubit<AuthState> with JozzLifecycleMixin {
 - Integration is **clean, scalable, and testable**
 - Especially useful for cross-feature flows like: `purchase → claims refresh`, `login → analytics`, `delete → undo`
 
-## 🔗 License
-
-MIT © Jozz
+## 🔗 License MIT © Jozz
