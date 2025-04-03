@@ -1,4 +1,12 @@
-# 📦 jozz_events
+![img](https://i.imgur.com/MFDGUvq.png)
+
+<p align="center">
+        <img src="https://img.shields.io/codefactor/grade/github/jozzzzep/jozz_events/main?style=flat-square">
+        <img src="https://img.shields.io/github/languages/code-size/jozzzzep/jozz_events?style=flat-square">
+        <img src="https://img.shields.io/github/license/jozzzzep/jozz_events?style=flat-square">
+        <img src="https://img.shields.io/pub/points/jozz_events?style=flat-square">
+        <img src="https://img.shields.io/pub/v/jozz_events?style=flat-square">
+</p>
 
 > **Domain-first, framework-agnostic event system for Clean Architecture**
 

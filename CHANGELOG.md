@@ -2,15 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
----
+## 1.1.2 - 2025-04-03
 
-## [1.1.1] - 2025-04-03
+- Updated README and added new logo and badges
+- Fixed issues in CHANGELOG
+
+## 1.1.1 - 2025-04-03
 
 - Updated README
 
----
-
-## [1.1.0] - 2025-04-03
+## 1.1.0 - 2025-04-03
 
 ### Added
 
@@ -24,9 +25,7 @@ All notable changes to this project will be documented in this file.
 - Documentation for singleton usage with best practice recommendations
 - Overall package organization and developer experience
 
----
-
-## [1.0.1] - 2025-04-02 - Initial release of `jozz_events`
+## 1.0.1 - 2025-04-02
 
 - `JozzBus` interface and `JozzBusService` implementation
 - Strongly-typed domain event system
@@ -34,5 +33,3 @@ All notable changes to this project will be documented in this file.
 - Lifecycle support with `JozzLifecycleMixin`
 - Subscription helpers (`JozzBusSubscription`)
 - Auto disposal of event listeners
-
----
