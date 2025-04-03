@@ -158,7 +158,7 @@ void main() {
 
 ---
 
-### 🧠 Why not just `event_bus`?
+### Why not just `event_bus`?
 
 While `event_bus` is convenient, it comes with architectural compromises. Here's how `jozz_events` stands apart:
 
