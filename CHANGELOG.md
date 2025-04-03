@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [1.1.1] - 2025-04-03
+
+- Updated README
+
+---
+
 ## [1.1.0] - 2025-04-03
 
 ### Added
