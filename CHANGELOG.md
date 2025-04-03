@@ -2,16 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
-## 1.1.2 - 2025-04-03
+## 1.1.3
+
+- Fixed more issues in CHANGELOG when displayed on pub.dev
+
+## 1.1.2
 
 - Updated README and added new logo and badges
 - Fixed issues in CHANGELOG
 
-## 1.1.1 - 2025-04-03
+## 1.1.1
 
 - Updated README
 
-## 1.1.0 - 2025-04-03
+## 1.1.0
 
 ### Added
 
@@ -25,7 +29,7 @@ All notable changes to this project will be documented in this file.
 - Documentation for singleton usage with best practice recommendations
 - Overall package organization and developer experience
 
-## 1.0.1 - 2025-04-02
+## 1.0.1
 
 - `JozzBus` interface and `JozzBusService` implementation
 - Strongly-typed domain event system
