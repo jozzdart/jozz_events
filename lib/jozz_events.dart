@@ -19,3 +19,7 @@ export 'extensions/jozz_bus_extensions.dart';
 // Lifecycle support
 export 'lifecycle/jozz_lifecycle_mixin.dart';
 export 'lifecycle/jozz_lifecycle_handler.dart';
+
+// Singleton (opt-in global access)
+// ⚠️ Not for clean architecture
+export 'singleton/jozz_events.dart';
