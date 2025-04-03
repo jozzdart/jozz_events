@@ -6,8 +6,6 @@
 
 Ideal for Dart projects (including Flutter), this package brings clarity and safety to event-driven design with first-class support for modularity, testability, and lifecycle awareness — **without any external dependencies**.
 
----
-
 ## 🚀 Why `jozz_events`?
 
 | Feature              | `jozz_events` | `event_bus` | Bloc-to-Bloc | Signals      |
@@ -19,7 +17,7 @@ Ideal for Dart projects (including Flutter), this package brings clarity and saf
 | Dependency Injection | ✅            | ❌          | ✅           | ⚠️           |
 
 <details>
-<summary>✅ Built for Clean Architecture</summary>
+<summary>Built for Clean Architecture</summary>
 
 - Events are **decoupled** from emitters and listeners.
 - Cross-layer support: **UI**, **Application**, **Domain**, and **Infrastructure**.
@@ -27,7 +25,7 @@ Ideal for Dart projects (including Flutter), this package brings clarity and saf
 </details>
 
 <details>
-<summary>✅ Strongly Typed & Predictable</summary>
+<summary>Strongly Typed & Predictable</summary>
 
 - No string-based identifiers or dynamic types.
 - Built entirely with Dart's **type-safe** system.
@@ -35,14 +33,14 @@ Ideal for Dart projects (including Flutter), this package brings clarity and saf
 </details>
 
 <details>
-<summary>✅ Framework-Agnostic</summary>
+<summary>Framework-Agnostic</summary>
 
 - No Flutter dependency.
 - Works in **Dart CLIs**, **server apps**, and **Flutter** (mobile/web/desktop).
 </details>
 
 <details>
-<summary>✅ Lifecycle-Aware</summary>
+<summary>Lifecycle-Aware</summary>
 
 - Optional lifecycle mixins for **Bloc**, **Cubit**, **State**, etc.
 - Subscriptions are cleaned up automatically when components are disposed.
@@ -59,7 +57,7 @@ Ideal for Dart projects (including Flutter), this package brings clarity and saf
 
 ---
 
-## 📦 Installation & Getting Started
+### Installation & Getting Started
 
 ```yaml
 dependencies:
@@ -71,8 +69,6 @@ Then import it:
 ```dart
 import 'package:jozz_events/jozz_events.dart';
 ```
-
----
 
 ## 🧱 Use Case Example
 
@@ -172,7 +168,7 @@ Even in non-Clean Architecture projects, **strong typing, lifecycle handling, an
 
 ---
 
-## ✅ Features
+### Features
 
 - ✅ Strongly typed events
 - ✅ No tight coupling between features
@@ -183,7 +179,7 @@ Even in non-Clean Architecture projects, **strong typing, lifecycle handling, an
 - ✅ Fluent event emission
 - ✅ Easy testing & mocking
 
-## 📢 Coming Soon
+### 📢 Coming Soon
 
 - ✅ Flutter integration helpers
 - 🧪 Testing utilities
@@ -196,9 +192,7 @@ Even in non-Clean Architecture projects, **strong typing, lifecycle handling, an
 
 > A step-by-step guide for integrating `jozz_events` into a modular, Clean Architecture Flutter project using `freezed`, `dartz`, and `injectable`
 
----
-
-## 🧠 What Is `jozz_events` and Why Use It in Clean Architecture?
+### What Is `jozz_events` and Why Use It in Clean Architecture?
 
 ### 🧩 Problem:
 
@@ -219,16 +213,16 @@ In a large Clean Architecture app, features should not know about each other. Bu
 
 ---
 
-## 🛠️ 1. Install the Package
+### 1. Install the Package
 
 ```yaml
 dependencies:
   jozz_events: ^<latest>
 ```
 
-## 🗂️ 2. Setup Event Bus for Dependency Injection
+### 2. Setup Event Bus for Dependency Injection
 
-### In your `core` folder:
+In your `core` folder:
 
 ```dart
 // core/events/jozz_bus_di.dart
@@ -251,7 +245,7 @@ final JozzBus jozzBus;
 MyBloc(this.jozzBus);
 ```
 
-## 🧾 3. Create a Domain Event
+### 3. Create a Domain Event
 
 ```dart
 // features/subscription/domain/events/subscription_purchased.dart
@@ -262,7 +256,7 @@ class SubscriptionPurchased extends JozzEvent {
 }
 ```
 
-## 📤 4. Emit the Event from a Use Case
+### 4. Emit the Event from a Use Case
 
 ```dart
 class PurchasePremium {
@@ -281,7 +275,7 @@ class PurchasePremium {
 }
 ```
 
-## 📥 5. Listen to the Event in Another Feature
+### 5. Listen to the Event in Another Feature
 
 In your `AuthCubit`, use the `JozzLifecycleMixin` to auto-dispose:
 
@@ -314,8 +308,6 @@ class AuthCubit extends Cubit<AuthState> with JozzLifecycleMixin {
 - Events are emitted from **use cases** and listened to in **Blocs, Cubits, or services**
 - Integration is **clean, scalable, and testable**
 - Especially useful for cross-feature flows like: `purchase → claims refresh`, `login → analytics`, `delete → undo`
-
----
 
 ## 🔗 License
 
