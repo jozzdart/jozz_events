@@ -1,44 +1,51 @@
 # 📦 jozz_events
 
-> **Domain-first, framework-agnostic event system built for Clean Architecture**
+> **Domain-first, framework-agnostic event system for Clean Architecture**
 
-**`jozz_events`** is a lightweight, strongly-typed event management system designed to enable clean, decoupled communication between features in large-scale applications.
+**`jozz_events`** is a lightweight, strongly-typed, and modular event bus designed for **Clean Architecture**. It enables scalable, maintainable, and **decoupled communication** across your application’s features and layers.
 
-Inspired by domain-driven design and separation of concerns, it enables features to react to domain events **without knowing about each other**, making it a perfect fit for **Clean Architecture**, modular design, and scalable systems.
+Ideal for Dart projects (including Flutter), this package brings clarity and safety to event-driven design with first-class support for modularity, testability, and lifecycle awareness — **without any external dependencies**.
 
 ---
 
 ## 🚀 Why `jozz_events`?
 
-### ✅ Clean Architecture Friendly
+### ✅ Built for Clean Architecture
 
-- Events are fully decoupled from emitters and listeners.
-- Works across layers: UI, Application, Domain, Infrastructure.
-- Perfect for feature-based modular projects.
+- Events are **decoupled** from emitters and listeners.
+- Cross-layer support: **UI**, **Application**, **Domain**, and **Infrastructure**.
+- Perfect for **feature-based** modular systems.
 
-### ✅ Typed, Predictable, and Testable
+### ✅ Strongly Typed & Predictable
 
-- No string-based events or untyped channels.
-- Built with Dart's type system using generics and sealed base classes.
+- No string-based identifiers or dynamic types.
+- Built entirely with Dart’s **type-safe** system.
+- Clear, explicit contracts via `JozzEvent`.
 
 ### ✅ Framework-Agnostic
 
-- No dependency on Flutter or any UI toolkit.
-- Can be used in Dart CLIs, server apps, or Flutter mobile/web/desktop.
+- No Flutter dependency.
+- Works in **Dart CLIs**, **server apps**, and **Flutter** (mobile/web/desktop).
 
-### ✅ Lifecycle Aware
+### ✅ Lifecycle-Aware
 
-- Optional lifecycle management for Bloc, Cubit, State, or any component.
-- Auto-dispose subscriptions on destruction.
+- Optional lifecycle mixins for **Bloc**, **Cubit**, **State**, etc.
+- Subscriptions are cleaned up automatically when components are disposed.
 
-### ✅ Simpler and Safer Than Alternatives
+### ✅ Simple, Testable, and Safer
 
-| Package            | Clean Arch Friendly | Strongly Typed | Lifecycle Support | Global Singleton | DI-Friendly |
-| ------------------ | ------------------- | -------------- | ----------------- | ---------------- | ----------- |
-| `jozz_events`      | ✅ Yes              | ✅ Yes         | ✅ Yes            | ❌ Opt-in only   | ✅ Yes      |
-| `event_bus`        | ❌ No               | ❌ No          | ❌ No             | ✅ Always        | ❌ No       |
-| Bloc-to-Bloc Comm. | ❌ Tight Coupling   | ✅ Yes         | ✅ Yes            | ❌               | ✅ Yes      |
-| Signals            | ❌ UI-focused       | ✅ Yes         | ✅ (via hooks)    | ❌               | ⚠️ UI-tied  |
+| Feature              | `jozz_events` | `event_bus` | Bloc-to-Bloc | Signals      |
+| -------------------- | ------------- | ----------- | ------------ | ------------ |
+| Clean Arch Friendly  | ✅            | ❌          | ❌ (Tight)   | ❌ (UI-tied) |
+| Strong Typing        | ✅            | ❌          | ✅           | ✅           |
+| Lifecycle Support    | ✅            | ❌          | ✅           | ⚠️ via hooks |
+| Global Singleton     | ❌ Opt-in     | ✅ Always   | ❌           | ❌           |
+| Dependency Injection | ✅            | ❌          | ✅           | ⚠️           |
+
+## 📑 Table of Contents
+
+- [Why jozz_events?](#-why-jozz_events)
+- [Use Case Example](#-use-case-example)
 
 ---
 
@@ -196,10 +203,10 @@ Created by developers who love Clean Architecture and hate spaghetti.
 ## 📢 Coming Soon
 
 - ✅ Singleton opt-in with `JozzBus.instance`
-- ✅ Flutter integration subpackage
-- 🧪 Built-in testing utilities
-- 🧩 Middleware or interceptors (event logging)
-- 📡 Namespaced topics or channels
+- ✅ Flutter integration helpers
+- 🧪 Testing utilities
+- 🧩 Middleware & event interceptors (logging, side effects)
+- 📡 Namespaced topics or channels for filtering
 
 ---
 
