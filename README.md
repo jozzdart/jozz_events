@@ -146,10 +146,10 @@ import 'package:jozz_events/jozz_events.dart';
 
 void main() {
   // Emit
-  JozzEvents.bus.emit(TodoCreatedEvent(todoId: '123', title: 'Do dishes'));
+  Jozz.bus.emit(TodoCreatedEvent(todoId: '123', title: 'Do dishes'));
 
   // Listen
-  JozzEvents.bus.on<TodoCreatedEvent>().listen((event) {
+  Jozz.bus.on<TodoCreatedEvent>().listen((event) {
     print('Global handler: ${event.title}');
   });
 }
@@ -157,8 +157,8 @@ void main() {
 
 ### Singleton Access
 
-- `JozzEvents.bus`: Access as `JozzBus` interface (recommended for most usage).
-- `JozzEvents.service`: Access full `JozzBusService` for advanced control (e.g. `dispose()`).
+- `Jozz.bus`: Access as `JozzBus` interface (recommended for most usage).
+- `Jozz.service`: Access full `JozzBusService` for advanced control (e.g. `dispose()`).
 
 > ⚠️ **Note:** Use the singleton **only if you're not using dependency injection.** In large, scalable apps, prefer constructor injection and `JozzBusService` instances per module.
 
