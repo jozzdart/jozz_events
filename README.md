@@ -1,8 +1,8 @@
 ![img](https://i.imgur.com/eGTitYT.png)
 
 <p align="center">
-        <img src="https://img.shields.io/codefactor/grade/github/jozzzzep/jozz_events/main?style=flat-square">
-        <img src="https://img.shields.io/github/license/jozzzzep/jozz_events?style=flat-square">
+        <img src="https://img.shields.io/codefactor/grade/github/jozzdart/jozz_events/main?style=flat-square">
+        <img src="https://img.shields.io/github/license/jozzdart/jozz_events?style=flat-square">
         <img src="https://img.shields.io/pub/points/jozz_events?style=flat-square">
         <img src="https://img.shields.io/pub/v/jozz_events?style=flat-square">
 </p>
