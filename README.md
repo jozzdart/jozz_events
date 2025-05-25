@@ -1,11 +1,15 @@
-![img](https://i.imgur.com/MFDGUvq.png)
+![img](https://i.imgur.com/eGTitYT.png)
 
 <p align="center">
-        <img src="https://img.shields.io/codefactor/grade/github/jozzzzep/jozz_events/main?style=flat-square">
-        <img src="https://img.shields.io/github/languages/code-size/jozzzzep/jozz_events?style=flat-square">
-        <img src="https://img.shields.io/github/license/jozzzzep/jozz_events?style=flat-square">
+        <img src="https://img.shields.io/codefactor/grade/github/jozzdart/jozz_events/main?style=flat-square">
+        <img src="https://img.shields.io/github/license/jozzdart/jozz_events?style=flat-square">
         <img src="https://img.shields.io/pub/points/jozz_events?style=flat-square">
         <img src="https://img.shields.io/pub/v/jozz_events?style=flat-square">
+</p>
+<p align="center">
+  <a href="https://buymeacoffee.com/yosefd99v" target="https://buymeacoffee.com/yosefd99v">
+    <img src="https://img.shields.io/badge/Buy%20me%20a%20coffee-Support (:-blue?logo=buymeacoffee&style=flat-square" />
+  </a>
 </p>
 
 > **Domain-first, framework-agnostic event system for Clean Architecture**
@@ -13,6 +17,14 @@
 **`jozz_events`** is a lightweight, strongly-typed, and modular event bus designed for **Clean Architecture**. It enables scalable, maintainable, and **decoupled communication** across your application’s features and layers.
 
 Ideal for Dart projects (including Flutter), this package brings clarity and safety to event-driven design with first-class support for modularity, testability, and lifecycle awareness — **without any external dependencies**.
+
+#### Table of Contents
+
+- [Use Case Example](#-use-case-example)
+- [Using the Global Singleton](#-using-the-global-singleton)
+- [Why not just `event_bus`?](#why-not-just-event_bus)
+- [Features](#features)
+- [**Clean Architecture Integration Tutorial**](#-clean-architecture-integration-tutorial)
 
 ## 🚀 Why `jozz_events`?
 
@@ -53,14 +65,6 @@ Ideal for Dart projects (including Flutter), this package brings clarity and saf
 - Optional lifecycle mixins for **Bloc**, **Cubit**, **State**, etc.
 - Subscriptions are cleaned up automatically when components are disposed.
 </details>
-
----
-
-- [Use Case Example](#-use-case-example)
-- [Using the Global Singleton](#-using-the-global-singleton)
-- [Why not just `event_bus`?](#-why-not-just-event_bus)
-- [Features](#-features)
-- [**Clean Architecture Integration Tutorial**](#-clean-architecture-integration-tutorial)
 
 ---
 
@@ -113,6 +117,8 @@ eventBus.on<TodoCreatedEvent>().listen((event) {
 
 👉 **For a quick singleton usage approach**, see the [🌍 Using the Global Singleton](#-using-the-global-singleton) section.
 
+_[⤴️ Back](#table-of-contents) -> Table of Contents_
+
 ---
 
 ### 📁 Clean Architecture Example Structure
@@ -140,10 +146,10 @@ import 'package:jozz_events/jozz_events.dart';
 
 void main() {
   // Emit
-  JozzEvents.bus.emit(TodoCreatedEvent(todoId: '123', title: 'Do dishes'));
+  Jozz.bus.emit(TodoCreatedEvent(todoId: '123', title: 'Do dishes'));
 
   // Listen
-  JozzEvents.bus.on<TodoCreatedEvent>().listen((event) {
+  Jozz.bus.on<TodoCreatedEvent>().listen((event) {
     print('Global handler: ${event.title}');
   });
 }
@@ -151,10 +157,12 @@ void main() {
 
 ### Singleton Access
 
-- `JozzEvents.bus`: Access as `JozzBus` interface (recommended for most usage).
-- `JozzEvents.service`: Access full `JozzBusService` for advanced control (e.g. `dispose()`).
+- `Jozz.bus`: Access as `JozzBus` interface (recommended for most usage).
+- `Jozz.service`: Access full `JozzBusService` for advanced control (e.g. `dispose()`).
 
 > ⚠️ **Note:** Use the singleton **only if you're not using dependency injection.** In large, scalable apps, prefer constructor injection and `JozzBusService` instances per module.
+
+_[⤴️ Back](#table-of-contents) -> Table of Contents_
 
 ---
 
@@ -172,6 +180,8 @@ While `event_bus` is convenient, it comes with architectural compromises. Here's
 | Testability          | ✅ Mockable     | ❌ Difficult      |
 
 Even in non-Clean Architecture projects, **strong typing, lifecycle handling, and testability** make `jozz_events` a safer, more robust foundation for event-driven code.
+
+_[⤴️ Back](#table-of-contents) -> Table of Contents_
 
 ---
 
@@ -192,6 +202,8 @@ Even in non-Clean Architecture projects, **strong typing, lifecycle handling, an
 - 🧪 Testing utilities
 - 🧩 Middleware & event interceptors (logging, side effects)
 - 📡 Namespaced topics or channels for filtering
+
+_[⤴️ Back](#table-of-contents) -> Table of Contents_
 
 ---
 
@@ -316,4 +328,14 @@ class AuthCubit extends Cubit<AuthState> with JozzLifecycleMixin {
 - Integration is **clean, scalable, and testable**
 - Especially useful for cross-feature flows like: `purchase → claims refresh`, `login → analytics`, `delete → undo`
 
+_[⤴️ Back](#table-of-contents) -> Table of Contents_
+
+---
+
 ## 🔗 License MIT © Jozz
+
+<p align="center">
+  <a href="https://buymeacoffee.com/yosefd99v" target="https://buymeacoffee.com/yosefd99v">
+    ☕ Enjoying this package? You can support it here.
+  </a>
+</p>

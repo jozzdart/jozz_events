@@ -1,6 +1,14 @@
-# Changelog
+## 1.1.4
 
-All notable changes to this project will be documented in this file.
+- Lowered Dart SDK constraint to `>=2.12.0 <4.0.0` for wider compatibility
+- Moved internal files to `lib/src/` to improve encapsulation and API clarity
+- Updated README links and improved navigation
+- Renamed the global singleton `JozzEvents` to `Jozz` for easier usage, old name still works but is deprecated
+  - Example:
+    ```dart
+    JozzEvents.bus.emit(event); // Old
+    Jozz.bus.emit(event); // New
+    ```
 
 ## 1.1.3
 
