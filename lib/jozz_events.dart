@@ -5,21 +5,4 @@
 /// of an application to communicate without direct dependencies on each other.
 library jozz_events;
 
-// Core components
-export 'bus/jozz_bus.dart';
-export 'bus/jozz_bus_service.dart';
-export 'bus/jozz_bus_subscription.dart';
-
-// Events
-export 'events/jozz_event.dart';
-
-// Extensions
-export 'extensions/jozz_bus_extensions.dart';
-
-// Lifecycle support
-export 'lifecycle/jozz_lifecycle_mixin.dart';
-export 'lifecycle/jozz_lifecycle_handler.dart';
-
-// Singleton (opt-in global access)
-// ⚠️ Not for clean architecture
-export 'singleton/jozz_events.dart';
+export 'src/jozz_events.dart';
